@@ -6,11 +6,11 @@ var square = new Square(10);
 try
 {
 
-
+    
     square.SetArea(2);
+   
 
-
-    Console.WriteLine("The area is " + square.GetArea());
+   Console.WriteLine("The area is " + square.GetArea());
 }
 catch(Exception ex)
 {
@@ -20,13 +20,14 @@ catch(Exception ex)
 
 
 
-var circle = new Circle();
+var circle = new Circle(2);
+
+
+
+Console.WriteLine("The area is " + circle.GetArea());
+
 
 ShapeColourHelper.AddColour(circle);
-
-
-
-
 
 ShapeColourHelper.AddColour(square);
 

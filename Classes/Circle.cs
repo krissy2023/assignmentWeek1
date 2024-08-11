@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Week1ObjectOriented.Classes
 {
     public class Circle : Shape
     {
-        public override int GetArea()
+        private double _radius;
+
+        public Circle(double radius)
         {
-            throw new NotImplementedException();
+            _radius = radius;
         }
+        public override double GetArea() => Math.PI * Math.Pow(_radius, 2);
+        
     }
 
 }
