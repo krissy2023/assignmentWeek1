@@ -1,17 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using Week1ObjectOriented.Interfaces;
 
 namespace Week1ObjectOriented.Classes
 {
-    public class Triangle : Shape, IFaces
+    public class Triangle : Shape, IFaces, IShape
+
     {
-        public override int GetArea()
+        private double _base;
+        private double _height;
+
+        public Triangle(double @base, double height)
         {
-            throw new NotImplementedException();
+            _base = @base;
+            _height = height;
+        }
+
+        public override string? Name { get; set; }
+        public override double Area { get; set; }
+
+        public double GetArea()
+        {
+            Area =  (_base * _height) / 2;
+            return Area;
         }
 
         public int GetFaces()

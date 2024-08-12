@@ -1,16 +1,18 @@
 ﻿
+using Week1ObjectOriented.Interfaces;
+
 namespace Week1ObjectOriented.Classes
 {
-    public abstract class Shape
+    public abstract class Shape 
     {
-        private int area;
+        public abstract double Area { get; set; }
 
-        public abstract int GetArea();
+        public abstract string? Name { get; set;}
+        
        
-
-        public void SetArea(int Area)
+        public void SetArea(double area)
         {
-            area = Area;
+            Area = area;
         }
 
         public string? Colour { get; set; }

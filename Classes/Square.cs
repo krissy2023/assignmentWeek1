@@ -3,36 +3,40 @@ using Week1ObjectOriented.Interfaces;
 
 namespace Week1ObjectOriented.Classes
 {
-    public class Square : Shape, IFaces
+    public class Square : Shape, IFaces, IShape
     {
-        private int side;
+         int side { get; set; }
+        
 
-        public Square(int s) 
+        private int _length;
+
+        public Square(int length)
         {
-            
-            if (s > 10)
-            {
-                throw new Exception("Cannot be greater then 10");
-            }
-
-            side = s;
+         
+            _length = length;
         }
 
-        public Square() { }
+        public override string? Name { get; set; }
+        public override double Area { get; set; }
 
         public void SetSide(int s)
         {
             side = s;
         }
 
-        public override int GetArea()
-        {
-            return side * side; 
-        }
-
         public int GetFaces()
         {
             throw new NotImplementedException();
+        }
+
+       
+
+        public double GetArea()
+        {
+
+            Area = _length * _length;
+
+            return Area;
         }
 
         public readonly int Sides;
