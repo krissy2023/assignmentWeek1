@@ -5,13 +5,14 @@ namespace Week1ObjectOriented.Classes
 {
     public abstract class Shape 
     {
-        private double area;
+        public abstract double Area { get; set; }
 
-       
+        public abstract string? Name { get; set;}
         
-        public void SetArea(double Area)
+       
+        public void SetArea(double area)
         {
-            area = Area;
+            Area = area;
         }
 
         public string? Colour { get; set; }

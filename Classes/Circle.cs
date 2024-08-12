@@ -7,13 +7,23 @@ namespace Week1ObjectOriented.Classes
     {
         private double _radius;
 
+        
         public Circle(double radius)
         {
             _radius = radius;
         }
 
+        public override string? Name { get; set; }
+        public override double Area { get; set; }
+
+        public double GetArea() 
+        {
+
+            Area = Math.PI * Math.Pow(_radius, 2);
+            return Area;
+                
+         }
         
-        public double GetArea() => Math.PI * Math.Pow(_radius, 2);
         
     }
 

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using Week1ObjectOriented.Interfaces;
 
 namespace Week1ObjectOriented.Classes
@@ -19,9 +15,13 @@ namespace Week1ObjectOriented.Classes
             _height = height;
         }
 
+        public override string? Name { get; set; }
+        public override double Area { get; set; }
+
         public double GetArea()
         {
-            return _base * _height / 2;
+            Area =  (_base * _height) / 2;
+            return Area;
         }
 
         public int GetFaces()

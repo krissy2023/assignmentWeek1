@@ -6,8 +6,8 @@ namespace Week1ObjectOriented.Classes
     public class Square : Shape, IFaces, IShape
     {
          int side { get; set; }
-
         
+
         private int _length;
 
         public Square(int length)
@@ -15,6 +15,9 @@ namespace Week1ObjectOriented.Classes
          
             _length = length;
         }
+
+        public override string? Name { get; set; }
+        public override double Area { get; set; }
 
         public void SetSide(int s)
         {
@@ -30,7 +33,10 @@ namespace Week1ObjectOriented.Classes
 
         public double GetArea()
         {
-           return _length * _length;
+
+            Area = _length * _length;
+
+            return Area;
         }
 
         public readonly int Sides;
