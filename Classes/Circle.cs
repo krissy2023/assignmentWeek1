@@ -1,4 +1,6 @@
 ﻿
+using Week1ObjectOriented.Interfaces;
+
 namespace Week1ObjectOriented.Classes
 {
     public class Circle : Shape
@@ -10,7 +12,7 @@ namespace Week1ObjectOriented.Classes
             _radius = radius;
         }
         public override double GetArea() => Math.PI * Math.Pow(_radius, 2);
-        
+
     }
 
 }
