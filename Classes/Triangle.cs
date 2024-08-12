@@ -7,14 +7,23 @@ using Week1ObjectOriented.Interfaces;
 
 namespace Week1ObjectOriented.Classes
 {
-    public class Triangle : Shape, IFaces
+    public class Triangle : Shape, IFaces, IShape
 
     {
-        
-        public override double GetArea()
+        private double _base;
+        private double _height;
+
+        public Triangle(double @base, double height)
         {
-            throw new NotImplementedException();
+            _base = @base;
+            _height = height;
         }
+
+        public double GetArea()
+        {
+            return _base * _height / 2;
+        }
+
         public int GetFaces()
         {
             throw new NotImplementedException();

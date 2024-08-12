@@ -2,7 +2,7 @@
 using System;
 using Week1ObjectOriented.Classes;
 
-var square = new Square(10);
+var square = new Square(2);
 
 
 try
